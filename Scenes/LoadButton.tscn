@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/LoadButton.gd" type="Script" id=1]
+
+[node name="LoadButton" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_right = 110.0
+offset_bottom = 33.0
+text = "Load"
+script = ExtResource( 1 )

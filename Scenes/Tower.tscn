@@ -1,0 +1,75 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://UI/sprites/tower/IMG-1731.PNG" type="Texture2D" id=1]
+[ext_resource path="res://UI/sprites/tower/IMG-1728.PNG" type="Texture2D" id=2]
+[ext_resource path="res://UI/sprites/tower/IMG-1740.PNG" type="Texture2D" id=3]
+[ext_resource path="res://UI/sprites/tower/IMG-1732.PNG" type="Texture2D" id=4]
+[ext_resource path="res://UI/sprites/tower/IMG-1739.PNG" type="Texture2D" id=5]
+[ext_resource path="res://UI/sprites/tower/IMG-1735.PNG" type="Texture2D" id=6]
+[ext_resource path="res://UI/sprites/tower/IMG-1736.PNG" type="Texture2D" id=7]
+[ext_resource path="res://UI/sprites/tower/IMG-1729.PNG" type="Texture2D" id=8]
+[ext_resource path="res://UI/sprites/tower/IMG-1734.PNG" type="Texture2D" id=9]
+[ext_resource path="res://UI/sprites/tower/IMG-1738.PNG" type="Texture2D" id=10]
+[ext_resource path="res://UI/sprites/tower/IMG-1730.PNG" type="Texture2D" id=11]
+[ext_resource path="res://UI/sprites/tower/IMG-1733.PNG" type="Texture2D" id=12]
+[ext_resource path="res://UI/sprites/tower/IMG-1737.PNG" type="Texture2D" id=13]
+[ext_resource path="res://Scripts/Tower.gd" type="Script" id=14]
+
+[node name="Tower" type="Node2D"]
+script = ExtResource( 14 )
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2( 96.0001, 85.0001 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="Prepared_Enviroment" type="Sprite2D" parent="Sprite2D"]
+position = Vector2( 39.9994, 59.9994 )
+texture = ExtResource( 2 )
+
+[node name="Energy" type="Sprite2D" parent="Sprite2D"]
+position = Vector2( -0.000671387, 59.9995 )
+texture = ExtResource( 8 )
+
+[node name="Stability" type="Sprite2D" parent="Sprite2D"]
+position = Vector2( -0.000610352, 59.9994 )
+texture = ExtResource( 11 )
+
+[node name="Ability" type="Sprite2D" parent="Sprite2D"]
+position = Vector2( -0.000610352, 69.9994 )
+texture = ExtResource( 1 )
+
+[node name="Responsibility" type="Sprite2D" parent="Sprite2D"]
+position = Vector2( -0.000671387, 59.9994 )
+texture = ExtResource( 4 )
+
+[node name="Perception" type="Sprite2D" parent="Sprite2D"]
+position = Vector2( 39.9994, 59.9994 )
+texture = ExtResource( 12 )
+
+[node name="Relationship" type="Sprite2D" parent="Sprite2D"]
+position = Vector2( -0.000610352, 69.9994 )
+texture = ExtResource( 9 )
+
+[node name="Discernment" type="Sprite2D" parent="Sprite2D"]
+position = Vector2( 39.9993, 69.9995 )
+texture = ExtResource( 6 )
+
+[node name="Resilience" type="Sprite2D" parent="Sprite2D"]
+position = Vector2( -0.000610352, 69.9994 )
+texture = ExtResource( 7 )
+
+[node name="Humanities" type="Sprite2D" parent="Sprite2D"]
+position = Vector2( -0.000610352, 79.9994 )
+texture = ExtResource( 13 )
+
+[node name="Sciences" type="Sprite2D" parent="Sprite2D"]
+position = Vector2( 39.9994, 79.9994 )
+texture = ExtResource( 10 )
+
+[node name="Diamond" type="Sprite2D" parent="Sprite2D"]
+position = Vector2( 17, 85 )
+texture = ExtResource( 5 )
+
+[node name="Arts" type="Sprite2D" parent="Sprite2D"]
+position = Vector2( -0.000610352, 79.9994 )
+texture = ExtResource( 3 )
