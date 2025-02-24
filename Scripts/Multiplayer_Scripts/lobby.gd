@@ -17,6 +17,7 @@ func _ready():
 		var desktop_path = OS.get_system_dir(0).replace("\\", "/").split("/")
 		set_name_text(desktop_path[desktop_path.size() - 2])
 
+#test commit push
 	
 	$LoadButton.visible = false
 	
