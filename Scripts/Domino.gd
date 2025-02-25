@@ -9,8 +9,8 @@ extends Node2D
 
 var original_pos = null
 # Affects the Domino hand as well
-var og_scale = .5 # Hard coded to fit scale of CentralDomino Node2D in DominoWorld.tscn
-var hover_scale = og_scale + 0.02
+var og_scale = .6 # Hard coded to fit scale of CentralDomino Node2D in DominoWorld.tscn
+var hover_scale = og_scale + 0.05
 var selected = false
 @export var placed = false
 
