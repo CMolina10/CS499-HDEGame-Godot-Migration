@@ -21,11 +21,11 @@ Welcome to the official GitHub repository for the Human Domino Effect (HDE) virt
 
 ---
 
-### How to Install
+### How to Install (as of February 2025)
 
-1.  Ensure you have the Godot 3.x game engine installed on your device.
+1.  Ensure you have the Godot 4.3 game engine installed on your device.
 2.  Download the .zip file of the HDE code or clone the GitHub repository locally.
-3.  Open Godot 3.x and select "Import Project".
+3.  Open Godot 4.3 and select "Import Project".
 4.  Once the project is imported, press the play button in the top right corner. The game will appear in a separate window.
 
 ---
