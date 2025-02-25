@@ -2,7 +2,7 @@ extends Node
 
 var loaded_data = false
 #Path to save the save file at.
-var SavePath = "res://Saves/Save1.json"
+var SavePath = "user://Saves/Save1.json"
 #Variable to contain save file while opening
 var SaveFile
 #Variable containing the save Data
@@ -42,6 +42,12 @@ func _ready():
 func save_button_pressed():
 	print("Save Button Pressed!")
 	SFXController.playSFX("res://audio/effects/select.wav")
+	
+	# Make sure directory exists
+	var dir = DirAccess.open("user://")
+	if not dir.dir_exists("Saves"):
+		dir.make_dir("Saves")
+	
 	Save["0"] = {
 			"Players": gamestate.players,
 			"Points": gamestate.total_points,
@@ -55,8 +61,13 @@ func save_button_pressed():
 			"clothes": gamestate.clothes,
 			"Current_Level": Save["0"].Current_Level,
 			"Current_Round": Save["0"].Current_Round
-		}	
+		}
+	
 	SaveFile = FileAccess.open(SavePath, FileAccess.WRITE)
+	if SaveFile == null:
+		print("Failed to open save file: ", FileAccess.get_open_error())
+		return
+	
 	SaveFile.store_string(JSON.stringify(Save, "\t"))
 	SaveFile.close()
 

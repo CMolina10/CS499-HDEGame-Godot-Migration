@@ -183,11 +183,17 @@ func draw_7():
 		add_child(domino)
 
 		# set domino position
+		#if i < 4:
+		#	domino.position = Vector2(2000, 400 * i - 600)
+		#else:
+		#	domino.position = Vector2(2250, 400 * (i - 4) - 600)
+		
+		# Scaled down Domino position
 		if i < 4:
-			domino.position = Vector2(2000, 400 * i - 600)
+			domino.position = Vector2(225, 64 * i - 96)
 		else:
-			domino.position = Vector2(2250, 400 * (i - 4) - 600)
-
+			domino.position = Vector2(300, 64 * (i - 4) - 96)
+		
 		# initialize domino
 		domino.init(
 			domino_nums[0],
@@ -292,9 +298,13 @@ func place_domino(num):
 			selected_domino.position = position_table[num] + placed_domino_offset[num]  # handles where the domnio is placed
 			path_ends[num] = selected_domino.top_num
 			end_dominos[num] = selected_domino
-
-			placed_domino_offset[num] = placed_domino_offset[num] + Vector2(160, -176)
-
+			
+			# Original
+			#placed_domino_offset[num] = placed_domino_offset[num] + Vector2(160, -176)
+			
+			# CS499 Feb 2025 Scaled Down .4x
+			placed_domino_offset[num] = placed_domino_offset[num] + Vector2(64, -70)
+			
 			num_placed += 1
 
 			turn = (turn + 1) % len(gamestate.players)
@@ -456,7 +466,7 @@ func replace_domino():
 	placed_domino_offset = [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0),
 							Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), 
 							Vector2(0, 0), Vector2(0, 0)]
-	var group_dominos = multiplayer.get_nodes_in_group("dominos")
+	var group_dominos = get_tree().get_nodes_in_group("dominos")
 	clear_selected_domino()
 	for domino in group_dominos:
 		domino.queue_free()
@@ -500,7 +510,15 @@ func replace_domino():
 	# reset path visibility
 	for i in range(1, 7):
 		if i != self_num + 1:
-			get_node("Path2D" + str(i)).visible = false
+			var path_node = get_node("Path" + str(i))
+			if path_node:
+				path_node.visible = true
+				print("Found and made visible: Path" + str(i))
+			else:
+				print("Could not find node: Path" + str(i))
+				# Print all child nodes to see what's actually available
+				for child in get_children():
+					print("Found child node: ", child.name)
 
 # handle when next round button pressed by host
 func _on_Next_pressed() -> void:
@@ -676,7 +694,7 @@ func _on_Start_mouse_exited():
 
 func _on_HelpButton_pressed():
 	$HelpMenu/HelpImage.visible = true
-	$HelpMenu.raise()
+	$HelpMenu.move_to_front()
 	
 func _on_CloseButton_pressed():
 	$HelpMenu/HelpImage.visible = false

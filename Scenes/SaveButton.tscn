@@ -1,16 +1,21 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://2qcxgankmj3j"]
 
-[ext_resource path="res://UI/Control/grey_button_down.png" type="Texture2D" id=2]
-[ext_resource path="res://UI/Control/green_button13.png" type="Texture2D" id=3]
-[ext_resource path="res://UI/Control/grey_button03.png" type="Texture2D" id=4]
-[ext_resource path="res://UI/Fonts/Non_Nunito/domino_font/human_domino.otf" type="FontFile" id=5]
-[ext_resource path="res://Scripts/SaveButton.gd" type="Script" id=6]
+[ext_resource type="Texture2D" uid="uid://77bnnplkinqm" path="res://UI/Control/grey_button_down.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://4y0sfebdco0k" path="res://UI/Control/green_button13.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://coqqyg76wct3k" path="res://UI/Control/grey_button03.png" id="4"]
+[ext_resource type="FontFile" uid="uid://cxgxlgqxgek6n" path="res://UI/Fonts/Non_Nunito/domino_font/human_domino.otf" id="5"]
+[ext_resource type="Script" path="res://Scripts/SaveButton.gd" id="6"]
 
-[sub_resource type="FontFile" id=1]
-size = 50
-use_mipmaps = true
-use_filter = true
-font_data = ExtResource( 5 )
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("5"), ExtResource("5")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
 
 [node name="SaveButton" type="Node2D"]
 
@@ -18,28 +23,31 @@ font_data = ExtResource( 5 )
 offset_right = 223.0
 offset_bottom = 67.0
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 2 )
-texture_hover = ExtResource( 3 )
-expand = true
-script = ExtResource( 6 )
+texture_normal = ExtResource("4")
+texture_pressed = ExtResource("2")
+texture_hover = ExtResource("3")
+script = ExtResource("6")
 
 [node name="MarginContainer" type="MarginContainer" parent="TextureButton"]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -33.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 theme_override_constants/margin_top = -4
 theme_override_constants/margin_bottom = 0
 
 [node name="Label" type="Label" parent="TextureButton/MarginContainer"]
-offset_top = 2.0
-offset_right = 223.0
-offset_bottom = 60.0
-theme_override_colors/font_color = Color( 0.6, 0.6, 0.6, 1 )
-theme_override_fonts/font = SubResource( 1 )
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_fonts/font = SubResource("1")
 text = "Save"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="mouse_entered" from="TextureButton" to="TextureButton" method="_on_TextureButton_mouse_entered"]
 [connection signal="mouse_exited" from="TextureButton" to="TextureButton" method="_on_TextureButton_mouse_exited"]
