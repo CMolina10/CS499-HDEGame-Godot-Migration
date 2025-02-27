@@ -190,11 +190,11 @@ func draw_7():
 		
 		# Scaled down Domino position
 		if i < 4:
-			domino.position = Vector2(225, 96 * i - 144)
-			domino.scale = Vector2(0.6, 0.6)  # Adjust this as needed, this scales the dominos in hand
+			domino.position = Vector2(100, 96 * i - 144)
+			domino.scale = Vector2(0.55, 0.55)  # Adjust this as needed, this scales the dominos in hand
 		else:
-			domino.position = Vector2(325, 96 * (i - 4) - 144)
-			domino.scale = Vector2(0.6, 0.6)
+			domino.position = Vector2(150, 96 * (i - 4) - 144)
+			domino.scale = Vector2(0.55, 0.55) 
 		
 		# initialize domino
 		domino.init(

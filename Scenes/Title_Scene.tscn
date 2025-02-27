@@ -148,13 +148,15 @@ libraries = {
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 100.0
-offset_top = 1000.0
-offset_right = 928.0
-offset_bottom = 1038.0
+offset_left = 200.0
+offset_top = 950.0
+offset_right = 360.0
+offset_bottom = 969.0
+scale = Vector2(4, 4)
 alignment = 1
 
 [node name="Label" type="Label" parent="HBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7

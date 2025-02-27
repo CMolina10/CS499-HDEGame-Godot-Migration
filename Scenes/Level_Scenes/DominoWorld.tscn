@@ -206,78 +206,88 @@ script = ExtResource("7")
 Domino = ExtResource("8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-192, 0)
 
 [node name="Board" type="Sprite2D" parent="."]
 z_index = -3
-position = Vector2(-192, 5.96046e-08)
+texture_filter = 1
+position = Vector2(-192, -50)
 rotation = 1.20428
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("1")
 
 [node name="Path1" parent="." instance=ExtResource("9")]
 z_index = -2
-position = Vector2(-108, -172)
+position = Vector2(-130, -176)
+scale = Vector2(0.03, 0.03)
 texture = null
 
 [node name="Path2" parent="." instance=ExtResource("9")]
 z_index = -2
-position = Vector2(-256, -176)
+position = Vector2(-240, -180)
+scale = Vector2(0.03, 0.03)
 texture = null
 num = 1
 
 [node name="Path3" parent="." instance=ExtResource("9")]
 z_index = -2
-position = Vector2(-3.99997, -68)
+position = Vector2(-58, -98)
+scale = Vector2(0.03, 0.03)
 texture = null
 num = 2
 
 [node name="Path4" parent="." instance=ExtResource("9")]
 z_index = -2
-position = Vector2(-366, 74)
+position = Vector2(-322, 6)
+scale = Vector2(0.03, 0.03)
 texture = null
 num = 3
 
 [node name="Path5" parent="." instance=ExtResource("9")]
 z_index = -2
-position = Vector2(-264, 176)
+position = Vector2(-246, 84)
+scale = Vector2(0.03, 0.03)
 texture = null
 num = 4
 
 [node name="Path6" parent="." instance=ExtResource("9")]
 z_index = -2
-position = Vector2(-118, 182)
+position = Vector2(-138, 86)
+scale = Vector2(0.03, 0.03)
 texture = null
 num = 5
 
 [node name="SunrisePath" parent="." instance=ExtResource("9")]
 z_index = -2
-position = Vector2(-362, -72)
+position = Vector2(-318, -104)
+scale = Vector2(0.03, 0.03)
 texture = null
 num = 6
 
 [node name="SunsetPath" parent="." instance=ExtResource("9")]
 z_index = -2
-position = Vector2(-9.99997, 82)
+position = Vector2(-58, 12)
+scale = Vector2(0.03, 0.03)
 texture = null
 num = 7
 
 [node name="Character Bubble1" parent="." instance=ExtResource("3")]
 z_index = -1
 position = Vector2(-114, -174)
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.4, 0.4)
 
 [node name="face" parent="Character Bubble1" index="0"]
-position = Vector2(-37.1429, 100)
+position = Vector2(-100, 115)
 
 [node name="front_hair" parent="Character Bubble1" index="1"]
-position = Vector2(-37.1429, 194.286)
+position = Vector2(-100, 210)
 
 [node name="back_hair" parent="Character Bubble1" index="2"]
-position = Vector2(-37.1429, 197.143)
+position = Vector2(-100, 210)
 texture = ExtResource("13")
 
 [node name="CollisionShape2D" parent="Character Bubble1/Area2D" index="0"]
-position = Vector2(-37.1429, 100)
+position = Vector2(-100, 115)
 
 [node name="Score" parent="Character Bubble1" index="4"]
 z_index = 2
@@ -294,39 +304,39 @@ offset_bottom = 42.0
 
 [node name="Character Bubble2" parent="." instance=ExtResource("3")]
 z_index = -1
-position = Vector2(-232, -106)
-scale = Vector2(0.7, 0.7)
+position = Vector2(-222, -130)
+scale = Vector2(0.4, 0.4)
 
 [node name="Character Bubble3" parent="." instance=ExtResource("3")]
 z_index = -1
-position = Vector2(-76, -40)
-scale = Vector2(0.7, 0.7)
+position = Vector2(-110, -78)
+scale = Vector2(0.4, 0.4)
 
 [node name="Character Bubble4" parent="." instance=ExtResource("3")]
 z_index = -1
-position = Vector2(-300, 48)
-scale = Vector2(0.7, 0.7)
+position = Vector2(-270, -16)
+scale = Vector2(0.4, 0.4)
 
 [node name="Character Bubble5" parent="." instance=ExtResource("3")]
 z_index = -1
-position = Vector2(-242, 114)
-scale = Vector2(0.7, 0.7)
+position = Vector2(-224, 30)
+scale = Vector2(0.4, 0.4)
 
 [node name="Character Bubble6" parent="." instance=ExtResource("3")]
 z_index = -1
-position = Vector2(-144, 116)
-scale = Vector2(0.7, 0.7)
+position = Vector2(-160, 30)
+scale = Vector2(0.4, 0.4)
 
 [node name="sunrise" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(-300, -52)
-scale = Vector2(0.4, 0.4)
+position = Vector2(-272, -84)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("4")
 
 [node name="sunset" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(-80, 50)
-scale = Vector2(0.4, 0.4)
+position = Vector2(-112, -12)
+scale = Vector2(0.24, 0.24)
 texture = ExtResource("5")
 
 [node name="Settings" parent="." instance=ExtResource("6")]
@@ -358,6 +368,7 @@ libraries = {
 autoplay = "Zoom Out"
 
 [node name="Turn" type="Label" parent="."]
+texture_filter = 1
 offset_left = -470.0
 offset_top = -222.0
 offset_right = -330.0
@@ -578,14 +589,17 @@ First Citizen:
 You are all resolved rather to die than to famish?"
 
 [node name="CentralDomino" parent="." instance=ExtResource("8")]
+texture_filter = 1
 position = Vector2(-192, 0)
-scale = Vector2(0.6, 0.6)
+scale = Vector2(0.5, 0.5)
 placed = true
 
 [node name="Sprite2D" parent="CentralDomino" index="0"]
-scale = Vector2(0.6, 0.6)
+position = Vector2(8, -112)
+scale = Vector2(0.5, 0.5)
 
 [node name="CollisionShape2D" parent="CentralDomino/Area2D" index="0"]
+position = Vector2(8, -112)
 scale = Vector2(0.8, 0.8)
 
 [node name="Place" type="AudioStreamPlayer" parent="."]
@@ -605,7 +619,7 @@ position = Vector2(-1146, -242)
 scale = Vector2(0.5, 0.5)
 
 [node name="SaveButton" parent="." instance=ExtResource("14")]
-position = Vector2(0, 250)
+position = Vector2(-191, 141)
 scale = Vector2(0.4, 0.4)
 
 [node name="Start" type="TextureButton" parent="."]
@@ -617,6 +631,7 @@ mouse_default_cursor_shape = 2
 texture_normal = ExtResource("19")
 texture_pressed = ExtResource("18")
 texture_hover = ExtResource("20")
+metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Start"]
 layout_mode = 0
@@ -636,15 +651,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Code" type="TextureButton" parent="."]
-offset_left = -300.0
-offset_top = 250.0
-offset_right = -110.0
-offset_bottom = 299.0
+offset_left = -144.0
+offset_top = 132.0
+offset_right = 46.0
+offset_bottom = 181.0
 scale = Vector2(0.4, 0.4)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("19")
 texture_pressed = ExtResource("18")
 texture_hover = ExtResource("20")
+metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Code"]
 layout_mode = 0
@@ -664,15 +680,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Next" type="TextureButton" parent="."]
-offset_left = -385.0
-offset_top = 250.0
-offset_right = -195.0
-offset_bottom = 299.0
+offset_left = -229.0
+offset_top = 160.0
+offset_right = -39.0
+offset_bottom = 209.0
 scale = Vector2(0.4, 0.4)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("19")
 texture_pressed = ExtResource("18")
 texture_hover = ExtResource("20")
+metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Next"]
 layout_mode = 0
@@ -692,15 +709,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Help" type="TextureButton" parent="."]
-offset_left = -470.0
-offset_top = 250.0
-offset_right = -280.0
-offset_bottom = 299.0
+offset_left = -314.0
+offset_top = 132.0
+offset_right = -124.0
+offset_bottom = 181.0
 scale = Vector2(0.4, 0.4)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("19")
 texture_pressed = ExtResource("18")
 texture_hover = ExtResource("20")
+metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Help"]
 layout_mode = 0
@@ -875,16 +893,17 @@ offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
 [node name="HelpButton" type="Button" parent="HelpMenu"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.8
+anchor_left = 1.6
 anchor_top = 0.75
-anchor_right = 0.8
+anchor_right = 1.6
 anchor_bottom = 0.75
-offset_left = 2.0
-offset_top = -242.0
-offset_right = 204.0
-offset_bottom = -36.0
+offset_left = 53.0
+offset_top = -260.0
+offset_right = 255.0
+offset_bottom = -54.0
 scale = Vector2(0.15, 0.15)
 theme_override_styles/hover = SubResource("18")
 theme_override_styles/pressed = SubResource("20")
@@ -895,21 +914,24 @@ metadata/_edit_use_anchors_ = true
 [node name="HelpImage" type="TextureRect" parent="HelpMenu"]
 visible = false
 layout_mode = 0
-offset_left = -1724.0
-offset_top = -1346.0
-offset_right = 1820.0
-offset_bottom = 1402.0
+offset_left = -506.0
+offset_top = -244.0
+offset_right = 6054.0
+offset_bottom = 4536.0
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("26")
+metadata/_edit_lock_ = true
 
 [node name="CloseButton" type="Button" parent="HelpMenu/HelpImage"]
 layout_mode = 0
-offset_left = 3234.0
-offset_top = 50.0
-offset_right = 3398.0
-offset_bottom = 210.0
+offset_left = 6280.0
+offset_top = 80.0
+offset_right = 6444.0
+offset_bottom = 240.0
 theme_override_styles/hover = SubResource("19")
 theme_override_styles/pressed = SubResource("21")
 theme_override_styles/normal = SubResource("17")
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="AlloyPopup/Close" to="." method="_close_Alloy_popup"]
 [connection signal="pressed" from="WellnessBeadPopup/Close" to="." method="_close_WellnessBead_popup"]
@@ -929,8 +951,8 @@ theme_override_styles/normal = SubResource("17")
 [connection signal="pressed" from="EnterCodeMenu/MarginContainer/VBoxContainer/MarginContainer/Enter" to="." method="_on_EnterButton_pressed"]
 [connection signal="pressed" from="EnterCodeMenu/X" to="." method="_on_X_pressed"]
 [connection signal="pressed" from="HelpMenu/HelpButton" to="." method="_on_HelpButton_pressed"]
-[connection signal="pressed" from="HelpMenu/HelpImage/CloseButton" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="HelpMenu/HelpImage/CloseButton" to="." method="_on_CloseButton_pressed"]
+[connection signal="pressed" from="HelpMenu/HelpImage/CloseButton" to="." method="_on_Button_pressed"]
 
 [editable path="Character Bubble1"]
 [editable path="Character Bubble1/Score"]
