@@ -205,6 +205,8 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("7")
 Domino = ExtResource("8")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [node name="Board" type="Sprite2D" parent="."]
 z_index = -3
 position = Vector2(-192, 5.96046e-08)
@@ -212,68 +214,50 @@ rotation = 1.20428
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("1")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="Path1" parent="." instance=ExtResource("9")]
-visible = false
 z_index = -2
-position = Vector2(80, -600)
-scale = Vector2(0.2, 0.2)
+position = Vector2(-108, -172)
 texture = null
 
 [node name="Path2" parent="." instance=ExtResource("9")]
-visible = false
 z_index = -2
-position = Vector2(-472, -600)
-scale = Vector2(0.2, 0.2)
+position = Vector2(-256, -176)
 texture = null
 num = 1
 
 [node name="Path3" parent="." instance=ExtResource("9")]
-visible = false
 z_index = -2
-position = Vector2(408, -272)
-scale = Vector2(0.2, 0.2)
+position = Vector2(-3.99997, -68)
 texture = null
 num = 2
 
 [node name="Path4" parent="." instance=ExtResource("9")]
-visible = false
 z_index = -2
-position = Vector2(-792, 288)
-scale = Vector2(0.2, 0.2)
+position = Vector2(-366, 74)
 texture = null
 num = 3
 
 [node name="Path5" parent="." instance=ExtResource("9")]
-visible = false
 z_index = -2
-position = Vector2(-456, 608)
-scale = Vector2(0.2, 0.2)
+position = Vector2(-264, 176)
 texture = null
 num = 4
 
 [node name="Path6" parent="." instance=ExtResource("9")]
-visible = false
 z_index = -2
-position = Vector2(48, 616)
-scale = Vector2(0.2, 0.2)
+position = Vector2(-118, 182)
 texture = null
 num = 5
 
 [node name="SunrisePath" parent="." instance=ExtResource("9")]
-visible = false
 z_index = -2
-position = Vector2(-800, -256)
-scale = Vector2(0.2, 0.2)
+position = Vector2(-362, -72)
 texture = null
 num = 6
 
 [node name="SunsetPath" parent="." instance=ExtResource("9")]
-visible = false
 z_index = -2
-position = Vector2(384, 312)
-scale = Vector2(0.2, 0.2)
+position = Vector2(-9.99997, 82)
 texture = null
 num = 7
 
@@ -282,8 +266,18 @@ z_index = -1
 position = Vector2(-114, -174)
 scale = Vector2(0.7, 0.7)
 
+[node name="face" parent="Character Bubble1" index="0"]
+position = Vector2(-37.1429, 100)
+
+[node name="front_hair" parent="Character Bubble1" index="1"]
+position = Vector2(-37.1429, 194.286)
+
 [node name="back_hair" parent="Character Bubble1" index="2"]
+position = Vector2(-37.1429, 197.143)
 texture = ExtResource("13")
+
+[node name="CollisionShape2D" parent="Character Bubble1/Area2D" index="0"]
+position = Vector2(-37.1429, 100)
 
 [node name="Score" parent="Character Bubble1" index="4"]
 z_index = 2
@@ -300,38 +294,38 @@ offset_bottom = 42.0
 
 [node name="Character Bubble2" parent="." instance=ExtResource("3")]
 z_index = -1
-position = Vector2(-266, -176)
+position = Vector2(-232, -106)
 scale = Vector2(0.7, 0.7)
 
 [node name="Character Bubble3" parent="." instance=ExtResource("3")]
 z_index = -1
-position = Vector2(-22, -76)
+position = Vector2(-76, -40)
 scale = Vector2(0.7, 0.7)
 
 [node name="Character Bubble4" parent="." instance=ExtResource("3")]
 z_index = -1
-position = Vector2(-374, 80)
+position = Vector2(-300, 48)
 scale = Vector2(0.7, 0.7)
 
 [node name="Character Bubble5" parent="." instance=ExtResource("3")]
 z_index = -1
-position = Vector2(-272, 182)
+position = Vector2(-242, 114)
 scale = Vector2(0.7, 0.7)
 
 [node name="Character Bubble6" parent="." instance=ExtResource("3")]
 z_index = -1
-position = Vector2(-122, 172)
+position = Vector2(-144, 116)
 scale = Vector2(0.7, 0.7)
 
 [node name="sunrise" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(-372, -72)
+position = Vector2(-300, -52)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("4")
 
 [node name="sunset" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(-22, 80)
+position = Vector2(-80, 50)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("5")
 
@@ -364,10 +358,10 @@ libraries = {
 autoplay = "Zoom Out"
 
 [node name="Turn" type="Label" parent="."]
-offset_left = -418.0
-offset_top = -212.0
-offset_right = -278.0
-offset_bottom = -158.0
+offset_left = -470.0
+offset_top = -222.0
+offset_right = -330.0
+offset_bottom = -168.0
 theme_override_fonts/font = SubResource("5")
 text = "'s
 Turn"
@@ -611,11 +605,12 @@ position = Vector2(-1146, -242)
 scale = Vector2(0.5, 0.5)
 
 [node name="SaveButton" parent="." instance=ExtResource("14")]
-position = Vector2(0, 100)
+position = Vector2(0, 250)
 scale = Vector2(0.4, 0.4)
 
 [node name="Start" type="TextureButton" parent="."]
-offset_right = 190.0
+offset_left = 50.0
+offset_right = 240.0
 offset_bottom = 49.0
 scale = Vector2(0.4, 0.4)
 mouse_default_cursor_shape = 2
@@ -641,9 +636,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Code" type="TextureButton" parent="."]
-offset_top = 50.0
-offset_right = 190.0
-offset_bottom = 99.0
+offset_left = -300.0
+offset_top = 250.0
+offset_right = -110.0
+offset_bottom = 299.0
 scale = Vector2(0.4, 0.4)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("19")
@@ -668,9 +664,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Next" type="TextureButton" parent="."]
-offset_top = 25.0
-offset_right = 190.0
-offset_bottom = 74.0
+offset_left = -385.0
+offset_top = 250.0
+offset_right = -195.0
+offset_bottom = 299.0
 scale = Vector2(0.4, 0.4)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("19")
@@ -695,9 +692,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Help" type="TextureButton" parent="."]
-offset_top = 75.0
-offset_right = 190.0
-offset_bottom = 124.0
+offset_left = -470.0
+offset_top = 250.0
+offset_right = -280.0
+offset_bottom = 299.0
 scale = Vector2(0.4, 0.4)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("19")

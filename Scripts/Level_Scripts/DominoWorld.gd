@@ -313,7 +313,8 @@ func place_domino(num):
 			$Turn.text = gamestate.players[sorted_players[turn]] + "'s\nTurn"
 
 			# if helped another player on their path, get a wellness bead
-			if num < 6 and get_node("Path2D" + str(num + 1)).temp == true:
+			var path_node = get_node_or_null("Path2D" + str(num + 1))
+			if num < 6 and (path_node and path_node.temp == true):
 				increment_wellness_beads(self_num + 1)
 				rpc("increment_wellness_beads", self_num + 1)
 				display_wellness_prompt()
