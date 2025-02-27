@@ -369,10 +369,9 @@ autoplay = "Zoom Out"
 
 [node name="Turn" type="Label" parent="."]
 texture_filter = 1
-offset_left = -470.0
-offset_top = -222.0
-offset_right = -330.0
-offset_bottom = -168.0
+offset_top = -230.0
+offset_right = 140.0
+offset_bottom = -176.0
 theme_override_fonts/font = SubResource("5")
 text = "'s
 Turn"
@@ -393,7 +392,7 @@ scores)"
 horizontal_alignment = 1
 
 [node name="AlloyPopup" type="Popup" parent="."]
-size = Vector2i(100, 113)
+size = Vector2i(600, 600)
 
 [node name="Title" type="Label" parent="AlloyPopup"]
 anchors_preset = 5
@@ -429,10 +428,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -504.0
-offset_top = 8.0
-offset_right = 516.0
-offset_bottom = 263.0
+offset_left = -130.0
+offset_top = -100.0
+offset_right = 890.0
+offset_bottom = 155.0
 theme_override_fonts/font = SubResource("7")
 text = "Electrum is an alloy of gold and silver.
 It represents blah blab an dblah."
@@ -443,14 +442,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -40.0
-offset_top = -80.0
-offset_right = 41.0
-offset_bottom = -5.0
+offset_left = -30.0
+offset_top = -255.0
+offset_right = 51.0
+offset_bottom = -205.0
 theme_override_fonts/font = SubResource("8")
 text = "OK"
 
 [node name="WellnessBeadPopup" type="Popup" parent="."]
+size = Vector2i(600, 425)
 
 [node name="Title" type="Label" parent="WellnessBeadPopup"]
 anchors_preset = 5
@@ -486,10 +486,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -504.0
-offset_top = 8.0
-offset_right = 516.0
-offset_bottom = 263.0
+offset_left = -130.0
+offset_top = -100.0
+offset_right = 890.0
+offset_bottom = 155.0
 theme_override_fonts/font = SubResource("7")
 text = "Electrum is an alloy of gold and silver.
 It represents blah blab an dblah."
@@ -500,15 +500,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -40.0
-offset_top = -80.0
-offset_right = 41.0
-offset_bottom = -5.0
+offset_left = -30.0
+offset_top = -65.0
+offset_right = 51.0
+offset_bottom = -15.0
 theme_override_fonts/font = SubResource("8")
 text = "OK"
 
 [node name="FootprintTilePopup" type="Popup" parent="."]
-size = Vector2i(247, 463)
+size = Vector2i(550, 600)
 
 [node name="Title" type="Label" parent="FootprintTilePopup"]
 anchors_preset = 5
@@ -559,9 +559,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -40.0
-offset_top = -80.0
+offset_top = -60.0
 offset_right = 41.0
-offset_bottom = -5.0
+offset_bottom = -10.0
 theme_override_fonts/font = SubResource("8")
 text = "OK"
 
@@ -615,8 +615,8 @@ stream = ExtResource("12")
 volume_db = -10.0
 
 [node name="Tower" parent="." instance=ExtResource("15")]
-position = Vector2(-1146, -242)
-scale = Vector2(0.5, 0.5)
+position = Vector2(-494, -86)
+scale = Vector2(0.2, 0.2)
 
 [node name="SaveButton" parent="." instance=ExtResource("14")]
 position = Vector2(-191, 141)
