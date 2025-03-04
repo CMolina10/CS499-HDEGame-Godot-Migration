@@ -145,7 +145,6 @@ project/assembly_name="The Domino Effect"
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 environment/defaults/default_environment="res://UI/Miscellaneous/default_env.tres"
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
