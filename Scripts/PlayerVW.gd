@@ -3,7 +3,6 @@ extends CharacterBody2D
 #added in Fall 2024
 
 #variables to help with player movement
-var velocity : Vector2 = Vector2()
 var direction : Vector2 = Vector2()
 
 func read_input():
@@ -27,10 +26,8 @@ func read_input():
 		direction = Vector2(1, 0)
 		
 	#to make sure the player's speed is normal when going in odd directions (diagonally)
-	velocity = velocity.normalized()
-	set_velocity(velocity * 200)
+	velocity = velocity.normalized() * 200
 	move_and_slide()
-	velocity = velocity
 
 #needed for maintaining collision control with objects in the level
 func _physics_process(delta):
